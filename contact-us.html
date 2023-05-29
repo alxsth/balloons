@@ -8,13 +8,37 @@
     <title>Contact Us</title>
 </head>
 <body>
-    <h1>Contact Us</h1>
+    <h1>Balloons Ltd.</h1>
     <ul class="navigation">
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="about-us.html">About us</a></li>
         <li><a class="active" href="contact-us.html">Contact us</a></li>
     </ul>
+    <br>
+
+    <h2>Contact Us</h2>
+    <p>We make bespoke balloons of all shapes and sizes, for all occasions and purposes.</p>
     <p>Please feel free to <a href="mailto:balloons@example.com">send us an email</a> if you would like to know more about our products</p>
+    
+    <br>
+
+    <form method="post">
+        <div class="form-control">
+            <label for="first-name">First name:</label><br>
+            <input type="text" name="first-name" id="first-name" required><br>
+        </div>
+        <div class="form-control">
+            <label for="last-name">Surname:</label><br>
+            <input type="text" name="surname" id="surname" required><br>
+        </div>
+        <div class="form-control">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" required><br>
+        </div>
+        <div class="form-control">
+            <input type="submit">
+        </div>
+    </form>
 </body>
 </html>

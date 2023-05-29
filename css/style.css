@@ -38,16 +38,8 @@ ul {
     list-style-type: square;
 }
 
-a {
-    color: #609;
-}
-
 a:visited {
     color: #876399;
-}
-
-a:hover {
-    color: #339900;
 }
 
 .introduction {
@@ -73,24 +65,43 @@ a:hover {
 }
 
 .navigation > li > a {
+    color: #609;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     color: #333;
     height: 100%;
-    transition: background-color 0.3s ease;
+    /* Transition that activate nav button highlight on hover and when using a tab
+    to navigate a website */
+    transition: all .5s ease-in-out;
 }
 
 .navigation > li > a:visited {
     color: #609;
 }
 
-.navigation > li > a:hover {
+.navigation > li > a:hover, a:focus {
     background-color: rgb(187, 222, 187);
-    /* display: block; */
 }
 
 .active {
     background-color: lightgray;
+}
+
+.active:hover, .active:focus {
+    background-color: lightgray;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control {
+    margin-bottom: 1em;
+}
+
+input {
+    margin-top: .5em;
 }
