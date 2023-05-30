@@ -93,15 +93,27 @@ a:visited {
     background-color: lightgray;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-
 .form-control {
     margin-bottom: 1em;
 }
 
+#submit {
+    display: inline-block;
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background-color: #609;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 input {
-    margin-top: .5em;
+    display: block;
+    width: 20em;
+    padding: 0.5em;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
