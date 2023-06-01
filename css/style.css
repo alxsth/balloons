@@ -49,33 +49,29 @@ a:visited {
 }
 
 .navigation {
-    display: flex;
-    justify-content: flex-start;
     list-style: none;
     background-color: rgb(157, 197, 157);
     border: 1px solid #4c0072;
     border-top: none;
     margin: 0;
-    padding: 0em;
-    height: 2em;
+    padding-left: 0;
+    margin-left: 0;
 }
 
 .navigation > li {
-    width: 100px;
-}
-
-.navigation > li > a {
+    margin: 0;
     color: #609;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
     color: #333;
     height: 100%;
+    padding: 0;
+}
+.navigation > li > a {
+    text-decoration: none;
+    padding: 1em;
     /* Transition that activate nav button highlight on hover and when using a tab
     to navigate a website */
-    transition: all .5s ease-in-out;
-}
+    transition: background-color 0.5s ease-in-out;
+  }
 
 .navigation > li > a:visited {
     color: #609;
@@ -84,14 +80,45 @@ a:visited {
 .navigation > li > a:hover, a:focus {
     background-color: rgb(187, 222, 187);
 }
+@media screen and (min-width: 30em) {
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .navigation > li {
+        padding: 0;
+        display: flex;
+    }
+    .navigation > li > a {
+        text-decoration: none;
+        padding: 1em;
+        flex-grow: 1;
+    }
+}
+@media screen and (max-width: 30em) {
+
+    .navigation {
+        display: flex;
+        flex-direction: column;
+    }
+    .navigation > li {
+        padding: 0;
+    }
+    .navigation > li > a {
+        padding: 1em;
+        text-decoration: none;
+        box-sizing: border-box;
+        display: block;
+    }
+}
 
 .active {
     background-color: lightgray;
-}
+    width: 100%;
+}   
 
-.active:hover, .active:focus {
-    background-color: lightgray;
-}
+
 
 .form-control {
     margin-bottom: 1em;
@@ -116,4 +143,18 @@ input {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    color: rgb(76, 76, 76);
+    font-weight: 400;
+    font-family: "CourierNew", Courier, monospace;
+    border: 1px solid #4c0072;
+    background-color: #e4e4e4;
+    padding: .5em;
+    margin-top: 3em;
+    height: 9em;
 }
